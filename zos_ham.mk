@@ -18,10 +18,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ham device
 $(call inherit-product, device/zuk/ham/ham.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common zos stuff.
+$(call inherit-product, vendor/zos/config/common.mk)
 
-PRODUCT_NAME := cm_ham
+PRODUCT_NAME := zos_ham
 PRODUCT_DEVICE := ham
 PRODUCT_MANUFACTURER := ZUK
 PRODUCT_MODEL := ZUK Z1
