@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/zos_ham.mk
-	$(LOCAL_DIR)/ham.mk
+    $(LOCAL_DIR)/zos_ham.mk\
+    $(LOCAL_DIR)/ham.mk
