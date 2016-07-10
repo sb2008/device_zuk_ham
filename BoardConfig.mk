@@ -67,11 +67,10 @@ AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
 AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_SMD_TTY := true
-BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 TARGET_USE_VENDOR_CAMERA_EXT := true
@@ -132,6 +131,7 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 TARGET_USES_WCNSS_CTRL           := true
 TARGET_USES_QCOM_WCNSS_QMI       := true
+TARGET_PROVIDES_WCNSS_QMI        := true
 TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 
 # Wifi - EAP-SIM
@@ -159,7 +159,7 @@ USE_DEVICE_SPECIFIC_LOC_API := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # QCRIL
-TARGET_RIL_VARIANT := caf
+# TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -173,7 +173,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
-# ANT+ - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this
+# ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 ifeq ($(HOST_OS),linux)
@@ -195,8 +195,7 @@ ifeq ($(BOARD_USES_QCNE),true)
 TARGET_LDPRELOAD := libNimsWrap.so
 endif
 
-# SELinux policies
-# qcom sepolicy
+# SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
