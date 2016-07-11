@@ -1,10 +1,27 @@
 [
   {
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common"
+    "repository":   "DirtyUnicorns/android_device_oppo_common",
+    "target_path":  "device/oppo/common",
+    "branch":       "m-caf"
   },
   {
-    "repository": "android_kernel_cyanogen_msm8974",
-    "target_path": "kernel/cyanogen/msm8974"
-  }
+    "repository":   "Z1project/android_kernel_cyanogen_msm8974",
+    "target_path":  "kernel/cyanogen/msm8974",
+    "branch":       "acuicultor"
+  },
+  {
+    "repository":   "Z1project/proprietary_vendor_zuk",
+    "target_path":  "vendor/zuk",
+    "branch":       "m-caf"
+   },
+   {
+    "repository":   "DirtyUnicorns/android_vendor_qcom_opensource_dataservices",
+    "target_path":  "vendor/qcom/opensource/dataservices",
+    "branch":       "m-caf"
+   },
+   {
+    "repository":   "DirtyUnicorns/android_packages_apps_Snap",
+    "target_path":  "packages/apps/Snap",
+    "branch":       "m-caf"
+   }
 ]
