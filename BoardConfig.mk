@@ -52,7 +52,7 @@ TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8974
 TARGET_KERNEL_CONFIG := cyanogenmod_k9_defconfig
 
 # Keymaster
-TARGET_HW_KEYMASTER_V03 := true
+#TARGET_HW_KEYMASTER_V03 := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -159,13 +159,14 @@ TARGET_HW_DISK_ENCRYPTION := true
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+# Dex-preoptimization
 ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
+    WITH_DEXPREOPT_COMP := false
   endif
 endif
+DONT_DEXPREOPT_PREBUILTS := true
 
 # inherit from the proprietary version
 ifneq ($(QCPATH),)

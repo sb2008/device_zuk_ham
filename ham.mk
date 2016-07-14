@@ -81,8 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8974 \
-    Snap
+    camera.msm8974 
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -96,10 +95,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -213,12 +208,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libxml2
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
-
 # Enable USB OTG interface
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
@@ -247,9 +236,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.telephony.call_ring.multiple=0
 
+# SnapdragonCamera
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.feature.restart=true	
+	
 # Permissions
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
