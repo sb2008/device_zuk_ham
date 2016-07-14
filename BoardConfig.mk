@@ -52,7 +52,7 @@ TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8974
 TARGET_KERNEL_CONFIG := cyanogenmod_k9_defconfig
 
 # Keymaster
-#TARGET_HW_KEYMASTER_V03 := true
+TARGET_HW_KEYMASTER_V03 := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
