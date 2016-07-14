@@ -134,10 +134,6 @@ TARGET_USES_WCNSS_CTRL           := true
 TARGET_USES_QCOM_WCNSS_QMI       := true
 TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 
-# Wifi - EAP-SIM
-CONFIG_EAP_PROXY                 := qmi
-CONFIG_EAP_PROXY_DUAL_SIM        := true
-
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -159,7 +155,7 @@ USE_DEVICE_SPECIFIC_LOC_API := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # QCRIL
-TARGET_RIL_VARIANT := caf
+#TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -172,9 +168,6 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
-
-# ANT+ - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
@@ -195,10 +188,7 @@ ifeq ($(BOARD_USES_QCNE),true)
 TARGET_LDPRELOAD := libNimsWrap.so
 endif
 
-# SELinux policies
-# qcom sepolicy
-
-BOARD_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy
+# SELinux policie
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 -include vendor/zuk/ham/BoardConfigVendor.mk
