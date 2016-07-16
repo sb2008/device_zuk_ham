@@ -166,9 +166,6 @@ TARGET_RECOVERY_FSTAB := device/zuk/ham/rootdir/etc/fstab.qcom
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/zuk/ham
 
-# Use HW crypto for ODE
-TARGET_HW_DISK_ENCRYPTION := true
-
 # ANT+ - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
